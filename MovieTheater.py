@@ -1,4 +1,5 @@
 import sys
+import os
 
 # Constants
 STARTING_ROW = 5
@@ -132,6 +133,8 @@ class MovieTheater:
             else:
                 outputFile.write('{} {}\n'.format(
                     i, ', '.join(self.reservations[i])))
+        outFileLocation = os.path.abspath('OutputFile.txt')
+        print('Output Located in: ' + str(os.path.abspath('OutputFile.txt')))
 
     # Function to print the theater visually (Debugging)
     def printTheater(self):
